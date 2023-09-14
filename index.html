@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tirage</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body style="background-color:#f6f6f6">
+
+<p class="alert alert-success" id="p" hidden>Votre tache a été ajoutée avec succés !!!</p>
+    <div class="container mt-4 col-md-8">
+        <div class="card">
+            <div class="card-header bg-light">
+                <div class="row">
+                    <div class="col-md-3">
+                        <button class="btn btn-primary" id="btnAjout">Ajouter une tache</button>
+                    </div>
+                    <h2 class="text-center  col-md-6">LES TACHES </h2>
+                    <div class="col-md-3">
+                        <button class="btn btn-success offset-3" id="btnAfficher">Lister les taches</button>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="form" hidden>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="">Titre : </label>
+                        </div>
+                        <div class="col-md-7">
+                            <input type="text" id="titre" class="form-control">
+                        </div>
+                            <span class="offset-4 text-danger text-center erreurTitre" hidden>
+                                Veuillez remplir le champ
+                            </span>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="">Description : </label>
+                        </div>
+                        <div class="col-md-7">
+                            <input type="text" id="description" class="form-control">
+                        </div>
+                        <span class="offset-4 text-danger text-center erreurDescription" hidden>
+                            Veuillez remplir le champ
+                        </span>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="">Date : </label>
+                        </div>
+                        <div class="col-md-7">
+                            <input type="date" id="date" class="form-control">
+                        </div>
+                        <span class="offset-4 text-danger text-center erreurDate" hidden>
+                            Veuillez remplir le champ
+                        </span>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="">Etat : </label>
+                        </div>
+                        <div class="col-md-7">
+                            <select name="" id="etat" class="form-control"> 
+                                <option value="">choix de l'etat</option>
+                                <option value="En cours">En cours</option>
+                            </select>
+                        </div>
+                        <span class="offset-4 text-danger text-center erreurEtat" hidden>
+                            Veuillez remplir le champ
+                        </span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="">Priorite : </label>
+                        </div>
+                        <div class="col-md-7">
+                            <select name="" id="priorite" class="form-control mt-4">
+                            <option value="">ta priorité</option>
+                            <option value="Faible">Faible</option>
+                            <option value="Moyenne">Moyenne</option>
+                            <option value="Forte">Forte</option>
+                        </select>
+                        </div>
+                        <span class="offset-4 text-danger text-center erreurPriorite" hidden>
+                                Veuillez remplir le champ
+                            </span>
+                    </div>
+                    <button class="btn btn-primary mt-3 offset-6" id="btnAjouter">Ajouter</button>
+                </div>
+                <div class="row" id="erreurChamp" hidden>
+                    <span class="offset-4 text-danger  text-center">
+                        Veuillez remplir le champ
+                    </span>
+                </div>
+                <span id="aucuneTache" hidden>Aucune taches n'est ajoutée !!!</span>
+                <div class="mt-4" hidden id="list">
+                    <h2 class="text-center text-primary">Liste des Taches</h2>
+                    <table class="table table-bordered" id="tableau_container">
+                        <tr class="bg-secondary text-white text-center">
+                            <th>Titre</th>
+                            <th>Description</th>
+                            <th>Date Limite</th>
+                            <th>État</th>
+                            <th>Priorité</th>
+                          </tr>
+                        <tbody id="tableParticipants">
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <script src="script.js"></script>
+</body>
+
+</html>
